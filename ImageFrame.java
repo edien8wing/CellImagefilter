@@ -9,6 +9,7 @@ import java.awt.*;
  *
  * @author Administrator
  */
+ //ImageFrame contains a Canvas . and the cavas paint a image in the init function
 public class ImageFrame extends Frame{
     private int height=0;
     private int width=0;
