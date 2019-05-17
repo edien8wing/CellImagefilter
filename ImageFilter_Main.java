@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package imagefilter;
-import imagefilter.arc.*;
-import imagefilter.FilterARC;
+import arc.*;
+import FilterARC;
 import javax.imageio.*;
 import java.net.URL;
 import java.awt.*;
