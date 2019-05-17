@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package imagefilter;
 
 import imagefilter.arc.ARC;
 import java.awt.Color;
@@ -15,6 +14,7 @@ import java.awt.image.BufferedImage;
  *
  * @author Administrator
  */
+
 public class FilterARC {
     BufferedImage img=null;
     public FilterARC(Image img){
