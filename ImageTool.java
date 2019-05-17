@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package imagefilter;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 /**
  *
  * @author Administrator
+ this class contains serval function such as Image addition\minus create a white \ black Image 
+ And you can use minus(image0(),thisImage) to get a reverse Image
  */
 public class ImageTool {
+    
     public static Image plus(Image a,Image b){
      BufferedImage a1 =(BufferedImage)a;
      BufferedImage b1 =(BufferedImage)b;
