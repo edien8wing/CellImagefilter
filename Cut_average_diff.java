@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package imagefilter;
+
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -13,6 +13,7 @@ import java.awt.image.BufferedImage;
 /**
  *
  * @author Administrator
+ * 
  */
 public class Cut_average_diff {
     BufferedImage img;
@@ -21,12 +22,18 @@ public class Cut_average_diff {
     int per_height;
     BufferedImage backImg;
     int sumWhite=0;
+    
+    /*init function load the image to the class*/
     public Cut_average_diff(Image img){
         this.img=(BufferedImage)img;
         backImg=new BufferedImage(this.img.getWidth(),this.img.getHeight(),BufferedImage.TYPE_INT_RGB);
         g=this.backImg.getGraphics();
         
     }
+    /*the function is the main function to process the Image 
+    the x and y is the number Image segmentation into how many blocks
+    and the percnet is a double number .it is a rate to Multiply this blocks The average of pixels in the current image block
+    */
     public BufferedImage process(int x,int y,double percent){
         per_width=this.img.getWidth()/x;
         per_height=this.img.getHeight()/y;
@@ -45,6 +52,10 @@ public class Cut_average_diff {
         System.out.println("点概率:"+(this.sumWhite+0.0)/sum);
         return backImg;
     }
+    /*
+    the function is to Calculate the each block
+    if the current point is lower than percent*average of this block drop it. 
+    */
     private void processlittleImage(int x,int y, double percent){
         //所有红色合计数
         double sumCol=0.0;
